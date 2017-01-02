@@ -1,0 +1,251 @@
+/* Global */
+html{width:100%;
+	 height:100%;
+	-ms-text-size-adjust:none;
+	-webkit-text-size-adjust:none;
+	-moz-text-size-adjust:none;
+	-o-text-size-adjust:none;
+}
+
+body{margin:0;
+	 padding:0;
+	 width:100%;
+	 height:100%;
+	 background:#47c9af;;
+	 color:#74777b;
+	 font-weight:500;
+	 font-size:1em;
+	 font-family:'Raleway', Arial, sans-serif;
+}
+
+ul{list-style:none;
+   padding:0;
+   margin:0;}
+
+a:link,a:visited{text-decoration:none;
+	             outline:none;}
+
+
+*, *:after, *:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box; }
+
+.clearfix:before,.clearfix:after{ content: ''; display:block;}
+.clearfix:after { clear: both; }
+
+/* Navigator */
+
+.nav{
+	width:820px;
+	height:300px;
+	margin:200px auto 0 auto;
+	font-weight:300;
+}
+
+.nav ul li {
+	display: inline-block;
+	position: relative;
+	margin: 0 1em;
+	font-size: 1.5em;
+}
+
+.nav ul li a {
+	display: inline-block;
+	font-weight: 700;
+	padding: 0.15em 0.25em 0;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition:color 0.3s;
+}
+
+.nav a{color:rgba(0,0,0,0.3);}
+
+.nav a:hover,.nav a:focus{color:#fff;}
+
+/* Tooltip */
+
+.tooltip {
+	display: inline;
+	position: relative;
+	z-index: 999;
+}
+
+.tooltip-content {
+	position: absolute;
+	z-index: 9999;
+	width: 80px;
+	height: 80px;
+	padding-top: 25px;
+	left: 50%;
+	margin-left: -40px;
+	bottom: 100%;
+	border-radius: 50%;
+	text-align: center;
+	background: #fff;
+	color: #47c9af;
+	
+	margin-bottom: 20px;
+	cursor: default;
+	pointer-events: none;
+	opacity: 0;/*在初始的地方定义动画，而不能在终点处定义。要紧挨着属性定义*/
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition:0.3s;
+	-o-transition: 0.3s;
+	transition:0.3s;
+}
+.tooltip-content:after
+{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 20px;
+	background:url("tooltip1.svg") no-repeat center center;
+	position: absolute;
+	top: 100%;
+    left:50%;
+    margin: -7px 0 0 -15px;
+/*opacity和display相比有一个透明度的变化*/
+
+}
+
+.tooltip .tooltip-content i {
+	opacity: 0;
+	-webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	-ms-transition:0.3s;
+	-o-transition:0.3s;
+	transition:0.3s;
+}
+
+.tooltip-effect-1 .tooltip-content
+{
+	-webkit-transform:translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	transform:translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-moz-transform:translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-ms-transform:translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-o-transform:translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-webkit-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-moz-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-ms-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-o-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+}
+
+ .tooltip-effect-1 .tooltip-content i
+{
+	-webkit-transform:scale3d(0,0,1);
+	-moz-transform:scale3d(0,0,1);
+	-ms-transform:scale3d(0,0,1);
+	-o-transform:scale3d(0,0,1);
+	transform:scale3d(0,0,1);
+
+
+}
+
+.tooltip-effect-2 .tooltip-content
+{
+	-webkit-transform:translate3d(0,20px,0);
+	transform:translate3d(0,20px,0);
+	-moz-transform:translate3d(0,20px,0);
+	-ms-transform:translate3d(0,20px,0);
+	-o-transform:translate3d(0,20px,0);
+
+}
+
+ .tooltip-effect-2 .tooltip-content i
+{
+	-webkit-transform:translate3d(0,15px,0);
+	transform:translate3d(0,15px,0);
+	-moz-transform:translate3d(0,15px,0);
+	-ms-transform:translate3d(0,15px,0);
+	-o-transform:translate3d(0,15px,0);
+	
+
+}
+
+.tooltip-effect-3 .tooltip-content
+{
+	-webkit-transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	-moz-transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	-ms-transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	-o-transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	-webkit-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-moz-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-ms-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-o-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+
+}
+
+ .tooltip-effect-3 .tooltip-content i
+{
+	
+-webkit-transform:scale3d(0,0,1);
+	-moz-transform:scale3d(0,0,1);
+	-ms-transform:scale3d(0,0,1);
+	-o-transform:scale3d(0,0,1);
+	transform:scale3d(0,0,1);
+}
+
+.tooltip-effect-4 .tooltip-content
+{
+	-webkit-transform:translate3d(0,-20px,0);
+	transform:translate3d(0,-20px,0);
+	-moz-transform:translate3d(0,-20px,0);
+	-ms-transform:translate3d(0,-20px,0);
+	-o-transform:translate3d(0,-20px,0);
+
+}
+
+ .tooltip-effect-4 .tooltip-content i
+{
+	
+	-webkit-transform:translate3d(0,20px,0);
+	transform:translate3d(0,20px,0);
+	-moz-transform:translate3d(0,20px,0);
+	-ms-transform:translate3d(0,20px,0);
+	-o-transform:translate3d(0,20px,0);
+
+}
+.tooltip-effect-5 .tooltip-content
+{
+-webkit-transform:scale3d(0,0,1);
+	-moz-transform:scale3d(0,0,1);
+	-ms-transform:scale3d(0,0,1);
+	-o-transform:scale3d(0,0,1);
+	transform:scale3d(0,0,1);
+	-webkit-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-moz-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-ms-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	-o-transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+	transform-origin:center bottom;/*origin首先要有translate等操作存在才有作用，且第一个值是水平方向，第二是竖直方向*/
+
+}
+
+ .tooltip-effect-5 .tooltip-content i
+{
+	-webkit-transform:translate3d(0,20px,0);
+	transform:translate3d(0,20px,0);
+	-moz-transform:translate3d(0,20px,0);
+	-ms-transform:translate3d(0,20px,0);
+	-o-transform:translate3d(0,20px,0);
+	
+
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-content i
+{
+	opacity: 1;
+	-webkit-transform:translate3d(0,0,0) rotate3d(1,1,1,0) scale3d(1,1,1);
+	-moz-transform:translate3d(0,0,0) rotate3d(1,1,1,0) scale3d(1,1,1);
+	-ms-transform:translate3d(0,0,0) rotate3d(1,1,1,0) scale3d(1,1,1);
+	-o-transform:translate3d(0,0,0) rotate3d(1,1,1,0) scale3d(1,1,1);
+	transform:translate3d(0,0,0) rotate3d(1,1,1,0) scale3d(1,1,1);
+
+}

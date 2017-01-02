@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" href="Untitled-2.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="menu">
+<ul>
+<li><a href="#">首页</a></li>
+<li><a href="#">关于我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">反馈信息</a></li>
+<li><a href="#">鼓励我们</a></li>
+</ul>
+</div>
+<script>
+window.onload=function()
+{
+	if(!document.getElementsByTagName) return false;
+	var as=document.getElementsByTagName("a");
+	if(as.length==0) return false;
+	for(var i=0;i<as.length;i++)
+	{
+		as[i].onmouseover=function()
+		{
+			var This =this;
+			clearInterval(this.time);
+			This.time=setInterval(function(){
+				
+				This.style.width=This.offsetWidth+8+"px";
+				if(This.offsetWidth>=160)
+				   clearInterval(This.time);
+				
+			},30);
+			
+			
+		}
+		
+		as[i].onmouseout=function()
+		{
+			var This =this;
+			clearInterval(this.time);
+			This.time=setInterval(function(){
+				
+				This.style.width=This.offsetWidth-8+"px";
+				if(This.offsetWidth<=100)
+				{  This.style.width="100px";
+				   clearInterval(This.time);
+				}
+			},30);
+			
+			
+		}
+		
+		
+		
+		
+		
+	}
+	
+	
+}
+
+
+</script>
+</body>
+</html>
